@@ -36,5 +36,10 @@ namespace Restaurant3
         {
 
         }
+
+        private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

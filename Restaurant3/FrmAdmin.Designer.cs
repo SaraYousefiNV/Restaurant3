@@ -42,9 +42,11 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dgv = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,14 +173,6 @@
             this.label7.TabIndex = 21;
             this.label7.Text = "تا :";
             // 
-            // dgv
-            // 
-            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Location = new System.Drawing.Point(92, 288);
-            this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(573, 150);
-            this.dgv.TabIndex = 22;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -194,6 +188,28 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(181, 20);
             this.textBox3.TabIndex = 23;
+            // 
+            // dgv
+            // 
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.UserName,
+            this.Password});
+            this.dgv.Location = new System.Drawing.Point(220, 304);
+            this.dgv.Name = "dgv";
+            this.dgv.Size = new System.Drawing.Size(317, 134);
+            this.dgv.TabIndex = 22;
+            this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
+            // 
+            // UserName
+            // 
+            this.UserName.HeaderText = "UserName";
+            this.UserName.Name = "UserName";
+            // 
+            // Password
+            // 
+            this.Password.HeaderText = "Password";
+            this.Password.Name = "Password";
             // 
             // FrmAdmin
             // 
@@ -244,8 +260,10 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
     }
 }
