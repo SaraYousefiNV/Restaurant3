@@ -156,6 +156,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtName);
             this.Name = "FrmAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ثبت نام ادمین";
             this.Load += new System.EventHandler(this.FrmAdmin_Load);
             this.ResumeLayout(false);
