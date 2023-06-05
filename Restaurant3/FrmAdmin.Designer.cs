@@ -44,10 +44,15 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
-            this.dgv = new System.Windows.Forms.DataGridView();
-            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OwnerFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NationalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
@@ -190,36 +195,65 @@
             this.txtAddress.Size = new System.Drawing.Size(181, 20);
             this.txtAddress.TabIndex = 23;
             // 
-            // dgv
+            // dataGridView1
             // 
-            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.UserName,
-            this.Password});
-            this.dgv.Location = new System.Drawing.Point(220, 304);
-            this.dgv.Name = "dgv";
-            this.dgv.Size = new System.Drawing.Size(317, 134);
-            this.dgv.TabIndex = 22;
-            this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Name,
+            this.OwnerFullName,
+            this.StartTime,
+            this.EndTime,
+            this.Mobile,
+            this.NationalCode,
+            this.Address});
+            this.dataGridView1.Location = new System.Drawing.Point(28, 275);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(726, 159);
+            this.dataGridView1.TabIndex = 25;
             // 
-            // UserName
+            // Name
             // 
-            this.UserName.HeaderText = "UserName";
-            this.UserName.Name = "UserName";
+            this.Name.HeaderText = "نام رستوران";
+            this.Name.Name = "Name";
             // 
-            // Password
+            // OwnerFullName
             // 
-            this.Password.HeaderText = "Password";
-            this.Password.Name = "Password";
+            this.OwnerFullName.HeaderText = "نام صاحب رستوران";
+            this.OwnerFullName.Name = "OwnerFullName";
+            // 
+            // StartTime
+            // 
+            this.StartTime.HeaderText = "ساعت شروع";
+            this.StartTime.Name = "StartTime";
+            // 
+            // EndTime
+            // 
+            this.EndTime.HeaderText = "ساعت پایان";
+            this.EndTime.Name = "EndTime";
+            // 
+            // Mobile
+            // 
+            this.Mobile.HeaderText = "موبایل";
+            this.Mobile.Name = "Mobile";
+            // 
+            // NationalCode
+            // 
+            this.NationalCode.HeaderText = "کد ملی";
+            this.NationalCode.Name = "NationalCode";
+            // 
+            // Address
+            // 
+            this.Address.HeaderText = "آدرس";
+            this.Address.Name = "Address";
             // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtAddress);
-            this.Controls.Add(this.dgv);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtDateTo);
@@ -239,7 +273,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ثبت نام رستوران";
             this.Load += new System.EventHandler(this.FrmAdmin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,8 +297,13 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.DataGridView dgv;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OwnerFullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StartTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EndTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mobile;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NationalCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
     }
 }

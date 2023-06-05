@@ -39,18 +39,7 @@ namespace Restaurant3
         private void FrmAdmin_Load(object sender, EventArgs e)
         {
            
-                var connectionstring = "server=.;database=RestaurantDB;trusted_connection=true";
-                SqlConnection connection = new SqlConnection(connectionstring);
-            connection.Open();
-                var query = "select * from Restaurants";
-                SqlCommand SqlCommand = new SqlCommand(query, connection);
-                SqlDataReader read = SqlCommand.ExecuteReader();
-            //if (read.HasRows)
-            //{
-            //    foodDataGridView.DataSource = read;
-            //}
-            
-            connection.Close();
+               
             
         }
 
@@ -58,13 +47,33 @@ namespace Restaurant3
         {
 
         }
-
+        private void GetAll()
+        {
+            SqlConnection con = new SqlConnection(Constanst.ConnectionString);
+            con.Open();
+            var query = $"Select * from Restaurants";
+            SqlCommand com = new SqlCommand(query, con);
+           SqlDataReader read= com.ExecuteReader();
+            
+            if (read.HasRows)
+            {
+                DataTable dt = new DataTable();
+                dataGridView1.DataSource = read;
+            }
+            con.Close();
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            var s = new RegisterRestaurant();
-            var a = new RegisterRestaurant();
-            //s.save(s);
-            MessageBox.Show("اطلاعات با موفقیت ثبت شد");
+
+            SqlConnection con = new SqlConnection(Constanst.ConnectionString);
+            con.Open();
+            var query = $"INSERT INTO Restaurants (Name,OwnerFullName,NationalCode,StartTime,EndTime,Address) VALUES (N'{txtName.Text}', N'{txtOwnerName.Text}', N'{txtDateTo.Text}', N'{txtDatefrom.Text}', N'{txtMobile.Text}',N'{txtNationalCode.Text}', N'{txtAddress.Text}')";
+            SqlCommand com = new SqlCommand(query, con);
+            com.ExecuteNonQuery();
+            con.Close();
+            GetAll();
+            
+            
         }
     }
 }
