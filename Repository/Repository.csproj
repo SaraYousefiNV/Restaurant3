@@ -42,7 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DataModel\Restaurant.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Constanst.cs" />
+    <Compile Include="Repositories\RegisterRestaurant.cs" />
+    <Compile Include="Repositories\RestaurantRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Query\" />

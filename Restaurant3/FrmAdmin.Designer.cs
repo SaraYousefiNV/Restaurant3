@@ -29,21 +29,21 @@
         private void InitializeComponent()
         {
             this.label4 = new System.Windows.Forms.Label();
-            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtMobile = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtDatefrom = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtFamily = new System.Windows.Forms.TextBox();
+            this.txtOwnerName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNationalCode = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtDateTo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,12 +61,12 @@
             this.label4.Text = "موبایل :";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // txtAddress
+            // txtMobile
             // 
-            this.txtAddress.Location = new System.Drawing.Point(274, 130);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(181, 20);
-            this.txtAddress.TabIndex = 17;
+            this.txtMobile.Location = new System.Drawing.Point(274, 130);
+            this.txtMobile.Name = "txtMobile";
+            this.txtMobile.Size = new System.Drawing.Size(181, 20);
+            this.txtMobile.TabIndex = 17;
             // 
             // label3
             // 
@@ -78,12 +78,12 @@
             this.label3.TabIndex = 16;
             this.label3.Text = "ساعت کارکرد :";
             // 
-            // txtID
+            // txtDatefrom
             // 
-            this.txtID.Location = new System.Drawing.Point(374, 97);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(70, 20);
-            this.txtID.TabIndex = 15;
+            this.txtDatefrom.Location = new System.Drawing.Point(374, 97);
+            this.txtDatefrom.Name = "txtDatefrom";
+            this.txtDatefrom.Size = new System.Drawing.Size(70, 20);
+            this.txtDatefrom.TabIndex = 15;
             // 
             // label2
             // 
@@ -96,12 +96,12 @@
             this.label2.Text = "نام صاحب رستوران :";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // txtFamily
+            // txtOwnerName
             // 
-            this.txtFamily.Location = new System.Drawing.Point(274, 55);
-            this.txtFamily.Name = "txtFamily";
-            this.txtFamily.Size = new System.Drawing.Size(181, 20);
-            this.txtFamily.TabIndex = 13;
+            this.txtOwnerName.Location = new System.Drawing.Point(274, 55);
+            this.txtOwnerName.Name = "txtOwnerName";
+            this.txtOwnerName.Size = new System.Drawing.Size(181, 20);
+            this.txtOwnerName.TabIndex = 13;
             // 
             // label1
             // 
@@ -121,6 +121,7 @@
             this.btnSave.TabIndex = 11;
             this.btnSave.Text = "ثبت";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtName
             // 
@@ -129,12 +130,12 @@
             this.txtName.Size = new System.Drawing.Size(181, 20);
             this.txtName.TabIndex = 10;
             // 
-            // textBox1
+            // txtNationalCode
             // 
-            this.textBox1.Location = new System.Drawing.Point(274, 173);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 20);
-            this.textBox1.TabIndex = 17;
+            this.txtNationalCode.Location = new System.Drawing.Point(274, 173);
+            this.txtNationalCode.Name = "txtNationalCode";
+            this.txtNationalCode.Size = new System.Drawing.Size(181, 20);
+            this.txtNationalCode.TabIndex = 17;
             // 
             // label5
             // 
@@ -148,12 +149,12 @@
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // textBox2
+            // txtDateTo
             // 
-            this.textBox2.Location = new System.Drawing.Point(274, 97);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(70, 20);
-            this.textBox2.TabIndex = 19;
+            this.txtDateTo.Location = new System.Drawing.Point(274, 97);
+            this.txtDateTo.Name = "txtDateTo";
+            this.txtDateTo.Size = new System.Drawing.Size(70, 20);
+            this.txtDateTo.TabIndex = 19;
             // 
             // label6
             // 
@@ -182,12 +183,12 @@
             this.label8.TabIndex = 24;
             this.label8.Text = "کد ملی :";
             // 
-            // textBox3
+            // txtAddress
             // 
-            this.textBox3.Location = new System.Drawing.Point(274, 204);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(181, 20);
-            this.textBox3.TabIndex = 23;
+            this.txtAddress.Location = new System.Drawing.Point(274, 204);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(181, 20);
+            this.txtAddress.TabIndex = 23;
             // 
             // dgv
             // 
@@ -217,19 +218,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.dgv);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtDateTo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtNationalCode);
+            this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.txtDatefrom);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtFamily);
+            this.Controls.Add(this.txtOwnerName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtName);
@@ -247,21 +248,21 @@
         #endregion
 
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtMobile;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtDatefrom;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtFamily;
+        private System.Windows.Forms.TextBox txtOwnerName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNationalCode;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtDateTo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
