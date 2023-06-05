@@ -58,17 +58,17 @@
     <Compile Include="CustomerList.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="FrmUsers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmUsers.Designer.cs">
-      <DependentUpon>FrmUsers.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmAdmin.Designer.cs">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsers.Designer.cs">
+      <DependentUpon>FrmUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmRes.cs">
       <SubType>Form</SubType>
@@ -111,11 +111,11 @@
     <Compile Include="RestaurantForm.Designer.cs">
       <DependentUpon>RestaurantForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FrmUsers.resx">
-      <DependentUpon>FrmUsers.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsers.resx">
+      <DependentUpon>FrmUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmRes.resx">
       <DependentUpon>FrmRes.cs</DependentUpon>
