@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services
+namespace Repository.Enums
 {
-    public class Class1
+    public enum OrderType
     {
+        getOut = 1,
+        getIn = 2
     }
 }

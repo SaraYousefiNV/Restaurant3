@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Services
+namespace Repository.Enums
 {
-    public enum OrderType
+    public enum Status
     {
-     getOut=1,
-     getIn=2
+        preparing = 1,
+        delivery = 2
     }
 }
