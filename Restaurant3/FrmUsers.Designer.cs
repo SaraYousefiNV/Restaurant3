@@ -1,4 +1,6 @@
-﻿namespace Restaurant3
+﻿using System;
+
+namespace Restaurant3
 {
     partial class FrmMain
     {
@@ -59,7 +61,7 @@
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "ثبت";
             this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.button1_Click);
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // dgv
             // 
@@ -137,10 +139,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.label5.Location = new System.Drawing.Point(484, 198);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 13);
+            this.label5.Size = new System.Drawing.Size(39, 13);
             this.label5.TabIndex = 20;
             this.label5.Text = "آدرس :";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;

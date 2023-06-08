@@ -1,14 +1,19 @@
-﻿using System.Data;
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Repository.Repositories
 {
-    public class RestaurantRepository
+    public class CustomerRepository
     {
-
+      
         public DataTable SelectAll()
         {
-            string query = "SELECT * FROM Restaurants";
+            string query = "SELECT * FROM Customers";
             SqlConnection connection = new SqlConnection(Constanst.ConnectionString);
             SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
             DataTable data = new DataTable();
@@ -17,7 +22,7 @@ namespace Repository.Repositories
 
         }
 
-        public bool Insert(string FullName, string OwnerFullName, string nationalcode, string mobile, string address, int type, int startTime, int endTime)
+        public bool Insert(string firstname, string lastname, string nationalcode, string mobile, string address, int type)
         {
             var userId = GetLastUserId() + 1;
             SqlConnection connection = new SqlConnection(Constanst.ConnectionString);
@@ -33,18 +38,18 @@ namespace Repository.Repositories
                 sqlCommand1.Parameters.AddWithValue("@Type", type);
                 connection.Open();
                 newID = (int)sqlCommand1.ExecuteScalar();
-                string query2 = "INSERT INTO Restaurants(FullName,OwnerFullName,NationalCode,Mobile,Address,StartTime,EndTime,UserId) " +
-                                      "VALUES (@FullName,@OwnerFullName,@NationalCode,@Mobile,@Address,@StartTime,@EndTime,@UserId)";
+
+
+                string query2 = "INSERT INTO Customers(UserId,FirstName,LastName,NationalCode,Mobile,Address) VALUES (@UserId,@FirstName,@LastName,@NationalCode,@Mobile,@Address)";
+
 
                 SqlCommand sqlCommand = new SqlCommand(query2, connection);
                 sqlCommand.Parameters.AddWithValue("@UserId", newID);
-                sqlCommand.Parameters.AddWithValue("@FullName", FullName);
-                sqlCommand.Parameters.AddWithValue("@OwnerFullName", OwnerFullName);
+                sqlCommand.Parameters.AddWithValue("@FirstName", firstname);
+                sqlCommand.Parameters.AddWithValue("@LastName", lastname);
                 sqlCommand.Parameters.AddWithValue("@NationalCode", nationalcode);
                 sqlCommand.Parameters.AddWithValue("@Mobile", mobile);
                 sqlCommand.Parameters.AddWithValue("@Address", address);
-                sqlCommand.Parameters.AddWithValue("@StartTime", startTime);
-                sqlCommand.Parameters.AddWithValue("@EndTime", endTime);
                 sqlCommand.ExecuteNonQuery();
 
 
@@ -67,6 +72,8 @@ namespace Repository.Repositories
             //BozorgTarin UserId ro bargardoone
             return 1;
         }
+
+
+
     }
 }
-

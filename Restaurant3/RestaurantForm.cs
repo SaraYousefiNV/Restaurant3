@@ -27,5 +27,10 @@ namespace Restaurant3
         {
 
         }
+
+        private void RestaurantForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

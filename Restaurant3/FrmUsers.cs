@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Services;
 using System.Runtime.Remoting.Services;
 using Repository;
-
+using Repository.Repositories;
 
 namespace Restaurant3
 {
@@ -21,26 +21,11 @@ namespace Restaurant3
             InitializeComponent();
         }
 
-        CustomerDBEntitiesEntities1 db = new CustomerDBEntitiesEntities1();        
-        private void button1_Click(object sender, EventArgs e)
-        {
-            CustomerList tbl = new CustomerList();
-            tbl.Name = txtName.Text;
-            tbl.FamilyName = txtFamily.Text;
-            tbl.ID = txtID.Text;
-            tbl.Address = txtAddress.Text;
-            db.CustomerLists.Add(tbl);
-            db.SaveChanges();
-            MessageBox.Show("اطلاعات با موفقیت ثبت شد");
-            var q = (from f in db.CustomerLists select f).ToList();
-            dgv.DataSource = q;
 
-        }
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-            var q = (from f in db.CustomerLists select f).ToList();
-            dgv.DataSource = q;
+
         }
 
         private void txtAddress_TextChanged(object sender, EventArgs e)
@@ -60,6 +45,7 @@ namespace Restaurant3
 
         private void FrmMain_Load_1(object sender, EventArgs e)
         {
+
 
         }
 
@@ -91,6 +77,21 @@ namespace Restaurant3
         private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            CustomerRepository CustomersRepository = new CustomerRepository();
+            bool isSuccess = CustomersRepository.Insert(txtName.Text, txtFamily.Text, txtID.Text, txtAddress.Text, txtAddress.Text, 2);
+            if (isSuccess == true)
+            {
+                MessageBox.Show("عملیات با موفقیت انجام شد", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                MessageBox.Show("عملیات با شکست مواجه شد", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

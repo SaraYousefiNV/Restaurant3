@@ -1,13 +1,5 @@
 ﻿using Repository.Repositories;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Restaurant3
@@ -18,35 +10,39 @@ namespace Restaurant3
         {
             InitializeComponent();
         }
-        private void GetAll()
-        {
-            SqlConnection con = new SqlConnection(Constanst.ConnectionString);
-            con.Open();
-            var query = $"Select * from Restaurants";
-            SqlCommand com = new SqlCommand(query, con);
-            SqlDataReader read = com.ExecuteReader();
-
-            if (read.HasRows)
-            {
-                DataTable dt = new DataTable();
-                dataGridView1.DataSource = read;
-            }
-            con.Close();
-        }
+      
+       
             private void FrmAdmin_Load(object sender, EventArgs e)
         {
+
 
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(Constanst.ConnectionString);
-            con.Open();
-            var query = $"INSERT INTO Restaurants (Name,OwnerFullName,NationalCode,StartTime,EndTime,Address) VALUES (N'{txtName.Text}', N'{txtOwnerName.Text}', N'{txtDateTo.Text}', N'{txtDatefrom.Text}', N'{txtMobile.Text}',N'{txtNationalCode.Text}', N'{txtAddress.Text}')";
-            SqlCommand com = new SqlCommand(query, con);
-            com.ExecuteNonQuery();
-            con.Close();
-            GetAll();
+            RestaurantRepository RestaurantRepository = new RestaurantRepository();
+          
+            bool isSuccess = RestaurantRepository.Insert(txtFullName.Text, txtOwnerName.Text,txtNationalCode.Text, txtMobile.Text,txtAddress.Text,1,Convert.ToInt32(txtDfrom.Text) , Convert.ToInt32(txtDTo.Text));
+
+            if (isSuccess == true)
+            {
+                MessageBox.Show("عملیات با موفقیت انجام شد", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                MessageBox.Show("عملیات با شکست مواجه شد", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

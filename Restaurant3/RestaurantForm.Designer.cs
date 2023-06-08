@@ -65,6 +65,7 @@
             this.Controls.Add(this.menuButton);
             this.Name = "RestaurantForm";
             this.Text = "RestaurantForm";
+            this.Load += new System.EventHandler(this.RestaurantForm_Load);
             this.ResumeLayout(false);
 
         }

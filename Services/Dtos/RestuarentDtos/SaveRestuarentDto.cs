@@ -1,12 +1,4 @@
-﻿using Repository.DataModel;
-using Repository.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Services.Dtos.RestuarentDtos
+﻿namespace Services.Dtos.RestuarentDtos
 {
     public class SaveRestuarentDto
     {

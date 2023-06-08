@@ -33,43 +33,29 @@
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtDateTo = new System.Windows.Forms.TextBox();
+            this.txtDTo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNationalCode = new System.Windows.Forms.TextBox();
             this.txtMobile = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtDatefrom = new System.Windows.Forms.TextBox();
+            this.txtDfrom = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtOwnerName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OwnerFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NationalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtFullName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FullName,
-            this.OwnerFullName,
-            this.StartTime,
-            this.EndTime,
-            this.Mobile,
-            this.NationalCode,
-            this.Address});
-            this.dataGridView1.Location = new System.Drawing.Point(37, 273);
+            this.dataGridView1.Location = new System.Drawing.Point(145, 273);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(726, 159);
+            this.dataGridView1.Size = new System.Drawing.Size(473, 159);
             this.dataGridView1.TabIndex = 42;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label8
             // 
@@ -86,6 +72,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(181, 20);
             this.txtAddress.TabIndex = 40;
+            this.txtAddress.TextChanged += new System.EventHandler(this.txtAddress_TextChanged);
             // 
             // label7
             // 
@@ -105,12 +92,12 @@
             this.label6.TabIndex = 38;
             this.label6.Text = "از :";
             // 
-            // txtDateTo
+            // txtDTo
             // 
-            this.txtDateTo.Location = new System.Drawing.Point(283, 95);
-            this.txtDateTo.Name = "txtDateTo";
-            this.txtDateTo.Size = new System.Drawing.Size(70, 20);
-            this.txtDateTo.TabIndex = 37;
+            this.txtDTo.Location = new System.Drawing.Point(283, 95);
+            this.txtDTo.Name = "txtDTo";
+            this.txtDTo.Size = new System.Drawing.Size(70, 20);
+            this.txtDTo.TabIndex = 37;
             // 
             // label5
             // 
@@ -157,12 +144,12 @@
             this.label3.TabIndex = 32;
             this.label3.Text = "ساعت کارکرد :";
             // 
-            // txtDatefrom
+            // txtDfrom
             // 
-            this.txtDatefrom.Location = new System.Drawing.Point(383, 95);
-            this.txtDatefrom.Name = "txtDatefrom";
-            this.txtDatefrom.Size = new System.Drawing.Size(70, 20);
-            this.txtDatefrom.TabIndex = 31;
+            this.txtDfrom.Location = new System.Drawing.Point(383, 95);
+            this.txtDfrom.Name = "txtDfrom";
+            this.txtDfrom.Size = new System.Drawing.Size(70, 20);
+            this.txtDfrom.TabIndex = 31;
             // 
             // label2
             // 
@@ -201,47 +188,12 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // txtName
+            // txtFullName
             // 
-            this.txtName.Location = new System.Drawing.Point(283, 18);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(181, 20);
-            this.txtName.TabIndex = 26;
-            // 
-            // FullName
-            // 
-            this.FullName.HeaderText = "نام رستوران";
-            this.FullName.Name = "FullName";
-            // 
-            // OwnerFullName
-            // 
-            this.OwnerFullName.HeaderText = "نام صاحب رستوران";
-            this.OwnerFullName.Name = "OwnerFullName";
-            // 
-            // StartTime
-            // 
-            this.StartTime.HeaderText = "ساعت شروع";
-            this.StartTime.Name = "StartTime";
-            // 
-            // EndTime
-            // 
-            this.EndTime.HeaderText = "ساعت پایان";
-            this.EndTime.Name = "EndTime";
-            // 
-            // Mobile
-            // 
-            this.Mobile.HeaderText = "موبایل";
-            this.Mobile.Name = "Mobile";
-            // 
-            // NationalCode
-            // 
-            this.NationalCode.HeaderText = "کد ملی";
-            this.NationalCode.Name = "NationalCode";
-            // 
-            // Address
-            // 
-            this.Address.HeaderText = "آدرس";
-            this.Address.Name = "Address";
+            this.txtFullName.Location = new System.Drawing.Point(283, 18);
+            this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Size = new System.Drawing.Size(181, 20);
+            this.txtFullName.TabIndex = 26;
             // 
             // FrmAdmin
             // 
@@ -253,19 +205,20 @@
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtDateTo);
+            this.Controls.Add(this.txtDTo);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNationalCode);
             this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtDatefrom);
+            this.Controls.Add(this.txtDfrom);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtOwnerName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtFullName);
             this.Name = "FrmAdmin";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "ثبت نام رستوران";
             this.Load += new System.EventHandler(this.FrmAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -281,24 +234,17 @@
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtDateTo;
+        private System.Windows.Forms.TextBox txtDTo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtNationalCode;
         private System.Windows.Forms.TextBox txtMobile;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDatefrom;
+        private System.Windows.Forms.TextBox txtDfrom;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtOwnerName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn OwnerFullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StartTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EndTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Mobile;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NationalCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.TextBox txtFullName;
     }
 }

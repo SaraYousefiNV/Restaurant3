@@ -1,4 +1,5 @@
-﻿using Services.Dtos.RestuarentDtos;
+﻿using Repository.Repositories;
+using Services.Dtos.RestuarentDtos;
 using Services.Services;
 using System;
 using System.Collections.Generic;
@@ -21,8 +22,8 @@ namespace Restaurant3
         }
         private void GetAll()
         {
-            var connectionstring = "server=.;database=RestaurantDB;trusted_connection=true";
-            SqlConnection con = new SqlConnection(connectionstring);
+       
+            SqlConnection con = new SqlConnection(Constanst.ConnectionString);
             con.Open();
             var query = "select * from Foods";
             SqlCommand com = new SqlCommand(query, con);
@@ -40,18 +41,16 @@ namespace Restaurant3
         }
 
         private void saveButton_Click(object sender, EventArgs e)
-        {
-
-            // var connectionstring = "server=.;database=RestaurantDB;trusted_connection=true";
+        { 
             //SqlConnection con = new SqlConnection(Constanst.ConnectionString);
             //con.Open();
             //var query = $"INSERT INTO Foods (RestaurantId,FoodName,Price,Description) VALUES ('4', '{foodNameTextBox.Text}', '{priceTextBox.Text}', '{descriptionTextBox.Text}')";
             //SqlCommand com = new SqlCommand(query, con);
             //com.ExecuteNonQuery();
             //con.Close();
-            var s = new RestaurantService();
-            var a = new SaveRestuarentDto();
-            //s.save(a);
+            //var s = new RestaurantService();
+            //var a = new SaveRestuarentDto();
+            ////s.save(a);
 
         }
 
