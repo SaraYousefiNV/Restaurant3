@@ -102,6 +102,7 @@
             this.ClientSize = new System.Drawing.Size(391, 207);
             this.Controls.Add(this.gpSignIn);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "FrmLogin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

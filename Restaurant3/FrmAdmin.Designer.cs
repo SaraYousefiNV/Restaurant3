@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.dgRestaurant = new System.Windows.Forms.DataGridView();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OwnerFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OwnerMobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OwnerNationalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -47,13 +54,6 @@
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.grpRes = new System.Windows.Forms.GroupBox();
             this.grpResDB = new System.Windows.Forms.GroupBox();
-            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OwnerFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OwnerMobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.OwnerNationalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgRestaurant)).BeginInit();
             this.grpRes.SuspendLayout();
             this.grpResDB.SuspendLayout();
@@ -78,6 +78,64 @@
             this.dgRestaurant.Size = new System.Drawing.Size(775, 121);
             this.dgRestaurant.TabIndex = 42;
             this.dgRestaurant.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // FullName
+            // 
+            this.FullName.DataPropertyName = "FullName";
+            this.FullName.HeaderText = "نام رستوران";
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            this.FullName.Width = 250;
+            // 
+            // OwnerFullName
+            // 
+            this.OwnerFullName.DataPropertyName = "OwnerFullName";
+            this.OwnerFullName.HeaderText = "نام مالک رستوران";
+            this.OwnerFullName.Name = "OwnerFullName";
+            this.OwnerFullName.ReadOnly = true;
+            this.OwnerFullName.Width = 150;
+            // 
+            // OwnerMobile
+            // 
+            this.OwnerMobile.DataPropertyName = "OwnerMobile";
+            this.OwnerMobile.HeaderText = "موبایل مالک رستوران";
+            this.OwnerMobile.Name = "OwnerMobile";
+            this.OwnerMobile.ReadOnly = true;
+            this.OwnerMobile.Visible = false;
+            this.OwnerMobile.Width = 150;
+            // 
+            // OwnerNationalCode
+            // 
+            this.OwnerNationalCode.DataPropertyName = "OwnerNationalCode";
+            this.OwnerNationalCode.HeaderText = "کد ملی مالک رستوران";
+            this.OwnerNationalCode.Name = "OwnerNationalCode";
+            this.OwnerNationalCode.ReadOnly = true;
+            this.OwnerNationalCode.Visible = false;
+            this.OwnerNationalCode.Width = 150;
+            // 
+            // StartTime
+            // 
+            this.StartTime.DataPropertyName = "StartTime";
+            this.StartTime.HeaderText = "ساعت شروع کار";
+            this.StartTime.Name = "StartTime";
+            this.StartTime.ReadOnly = true;
+            this.StartTime.Width = 120;
+            // 
+            // EndTime
+            // 
+            this.EndTime.DataPropertyName = "EndTime";
+            this.EndTime.HeaderText = "ساعت اتمام کار";
+            this.EndTime.Name = "EndTime";
+            this.EndTime.ReadOnly = true;
+            this.EndTime.Width = 120;
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "Address";
+            this.Address.HeaderText = "آدرس";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            this.Address.Width = 220;
             // 
             // label8
             // 
@@ -254,64 +312,6 @@
             this.grpResDB.TabStop = false;
             this.grpResDB.Text = "رستوران ها";
             // 
-            // FullName
-            // 
-            this.FullName.DataPropertyName = "FullName";
-            this.FullName.HeaderText = "نام رستوران";
-            this.FullName.Name = "FullName";
-            this.FullName.ReadOnly = true;
-            this.FullName.Width = 250;
-            // 
-            // OwnerFullName
-            // 
-            this.OwnerFullName.DataPropertyName = "OwnerFullName";
-            this.OwnerFullName.HeaderText = "نام مالک رستوران";
-            this.OwnerFullName.Name = "OwnerFullName";
-            this.OwnerFullName.ReadOnly = true;
-            this.OwnerFullName.Width = 150;
-            // 
-            // OwnerMobile
-            // 
-            this.OwnerMobile.DataPropertyName = "OwnerMobile";
-            this.OwnerMobile.HeaderText = "موبایل مالک رستوران";
-            this.OwnerMobile.Name = "OwnerMobile";
-            this.OwnerMobile.ReadOnly = true;
-            this.OwnerMobile.Visible = false;
-            this.OwnerMobile.Width = 150;
-            // 
-            // OwnerNationalCode
-            // 
-            this.OwnerNationalCode.DataPropertyName = "OwnerNationalCode";
-            this.OwnerNationalCode.HeaderText = "کد ملی مالک رستوران";
-            this.OwnerNationalCode.Name = "OwnerNationalCode";
-            this.OwnerNationalCode.ReadOnly = true;
-            this.OwnerNationalCode.Visible = false;
-            this.OwnerNationalCode.Width = 150;
-            // 
-            // StartTime
-            // 
-            this.StartTime.DataPropertyName = "StartTime";
-            this.StartTime.HeaderText = "ساعت شروع کار";
-            this.StartTime.Name = "StartTime";
-            this.StartTime.ReadOnly = true;
-            this.StartTime.Width = 120;
-            // 
-            // EndTime
-            // 
-            this.EndTime.DataPropertyName = "EndTime";
-            this.EndTime.HeaderText = "ساعت اتمام کار";
-            this.EndTime.Name = "EndTime";
-            this.EndTime.ReadOnly = true;
-            this.EndTime.Width = 120;
-            // 
-            // Address
-            // 
-            this.Address.DataPropertyName = "Address";
-            this.Address.HeaderText = "آدرس";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            this.Address.Width = 220;
-            // 
             // FrmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,6 +321,7 @@
             this.Controls.Add(this.grpResDB);
             this.Controls.Add(this.grpRes);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "FrmAdmin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
