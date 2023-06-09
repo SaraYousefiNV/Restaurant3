@@ -15,6 +15,7 @@ namespace Restaurant3
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmMain());
+         
         }
     }
 }

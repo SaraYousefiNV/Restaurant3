@@ -31,19 +31,17 @@
             this.deleteButton = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.editButton = new System.Windows.Forms.Button();
-            this.descriptionTextBox = new System.Windows.Forms.TextBox();
-            this.priceTextBox = new System.Windows.Forms.TextBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.foodNameTextBox = new System.Windows.Forms.TextBox();
+            this.txtfoodName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.foodDataGridView = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RestaurantId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.foodDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,25 +81,25 @@
             this.editButton.UseVisualStyleBackColor = true;
             this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
-            // descriptionTextBox
+            // txtDescription
             // 
-            this.descriptionTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descriptionTextBox.Location = new System.Drawing.Point(434, 136);
-            this.descriptionTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.descriptionTextBox.Name = "descriptionTextBox";
-            this.descriptionTextBox.Size = new System.Drawing.Size(175, 29);
-            this.descriptionTextBox.TabIndex = 18;
-            this.descriptionTextBox.TextChanged += new System.EventHandler(this.descriptionTextBox_TextChanged);
+            this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Location = new System.Drawing.Point(434, 136);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(175, 29);
+            this.txtDescription.TabIndex = 18;
+            this.txtDescription.TextChanged += new System.EventHandler(this.descriptionTextBox_TextChanged);
             // 
-            // priceTextBox
+            // txtPrice
             // 
-            this.priceTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.priceTextBox.Location = new System.Drawing.Point(434, 97);
-            this.priceTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.priceTextBox.Name = "priceTextBox";
-            this.priceTextBox.Size = new System.Drawing.Size(175, 29);
-            this.priceTextBox.TabIndex = 17;
-            this.priceTextBox.TextChanged += new System.EventHandler(this.priceTextBox_TextChanged);
+            this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrice.Location = new System.Drawing.Point(434, 97);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(175, 29);
+            this.txtPrice.TabIndex = 17;
+            this.txtPrice.TextChanged += new System.EventHandler(this.priceTextBox_TextChanged);
             // 
             // label3
             // 
@@ -125,15 +123,15 @@
             this.label2.TabIndex = 15;
             this.label2.Text = ": قیمت";
             // 
-            // foodNameTextBox
+            // txtfoodName
             // 
-            this.foodNameTextBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foodNameTextBox.Location = new System.Drawing.Point(435, 52);
-            this.foodNameTextBox.Margin = new System.Windows.Forms.Padding(2);
-            this.foodNameTextBox.Name = "foodNameTextBox";
-            this.foodNameTextBox.Size = new System.Drawing.Size(175, 29);
-            this.foodNameTextBox.TabIndex = 14;
-            this.foodNameTextBox.TextChanged += new System.EventHandler(this.foodNameTextBox_TextChanged);
+            this.txtfoodName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtfoodName.Location = new System.Drawing.Point(435, 52);
+            this.txtfoodName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtfoodName.Name = "txtfoodName";
+            this.txtfoodName.Size = new System.Drawing.Size(175, 29);
+            this.txtfoodName.TabIndex = 14;
+            this.txtfoodName.TextChanged += new System.EventHandler(this.foodNameTextBox_TextChanged);
             // 
             // label1
             // 
@@ -162,33 +160,24 @@
             // 
             this.foodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.foodDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.RestaurantId,
+            this.FoodName,
             this.Price,
-            this.Description,
-            this.FoodName});
-            this.foodDataGridView.Location = new System.Drawing.Point(104, 176);
+            this.Description});
+            this.foodDataGridView.Location = new System.Drawing.Point(206, 188);
             this.foodDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.foodDataGridView.Name = "foodDataGridView";
             this.foodDataGridView.RowHeadersWidth = 51;
             this.foodDataGridView.RowTemplate.Height = 24;
-            this.foodDataGridView.Size = new System.Drawing.Size(574, 222);
+            this.foodDataGridView.Size = new System.Drawing.Size(420, 231);
             this.foodDataGridView.TabIndex = 11;
             this.foodDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.foodDataGridView_CellContentClick);
             // 
-            // Id
+            // FoodName
             // 
-            this.Id.HeaderText = "Id";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.Width = 125;
-            // 
-            // RestaurantId
-            // 
-            this.RestaurantId.HeaderText = "RestaurantId";
-            this.RestaurantId.MinimumWidth = 6;
-            this.RestaurantId.Name = "RestaurantId";
-            this.RestaurantId.Width = 125;
+            this.FoodName.HeaderText = "نام";
+            this.FoodName.MinimumWidth = 6;
+            this.FoodName.Name = "FoodName";
+            this.FoodName.Width = 125;
             // 
             // Price
             // 
@@ -204,13 +193,6 @@
             this.Description.Name = "Description";
             this.Description.Width = 125;
             // 
-            // FoodName
-            // 
-            this.FoodName.HeaderText = "نام";
-            this.FoodName.MinimumWidth = 6;
-            this.FoodName.Name = "FoodName";
-            this.FoodName.Width = 125;
-            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,15 +202,16 @@
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.editButton);
-            this.Controls.Add(this.descriptionTextBox);
-            this.Controls.Add(this.priceTextBox);
+            this.Controls.Add(this.txtDescription);
+            this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.foodNameTextBox);
+            this.Controls.Add(this.txtfoodName);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.foodDataGridView);
             this.Name = "MenuForm";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Text = "MenuForm";
             this.Load += new System.EventHandler(this.MenuForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.foodDataGridView)).EndInit();
@@ -242,18 +225,16 @@
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Button editButton;
-        private System.Windows.Forms.TextBox descriptionTextBox;
-        private System.Windows.Forms.TextBox priceTextBox;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox foodNameTextBox;
+        private System.Windows.Forms.TextBox txtfoodName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.DataGridView foodDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RestaurantId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FoodName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FoodName;
     }
 }
