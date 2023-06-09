@@ -38,7 +38,6 @@
             this.button2.BackColor = System.Drawing.SystemColors.Control;
             this.button2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = global::Restaurant3.Properties.Resources.Customer;
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.button2.Location = new System.Drawing.Point(312, 192);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 98);
