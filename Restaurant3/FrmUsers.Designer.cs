@@ -86,7 +86,7 @@ namespace Restaurant3
             this.dgUsers.Location = new System.Drawing.Point(0, 20);
             this.dgUsers.Name = "dgUsers";
             this.dgUsers.ReadOnly = true;
-            this.dgUsers.Size = new System.Drawing.Size(776, 131);
+            this.dgUsers.Size = new System.Drawing.Size(776, 136);
             this.dgUsers.TabIndex = 2;
             this.dgUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
             // 
@@ -245,7 +245,7 @@ namespace Restaurant3
             this.groupBox2.Controls.Add(this.dgUsers);
             this.groupBox2.Location = new System.Drawing.Point(12, 287);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(776, 147);
+            this.groupBox2.Size = new System.Drawing.Size(776, 162);
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "کاربران";
@@ -254,10 +254,12 @@ namespace Restaurant3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(801, 461);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.grpUser);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.MaximizeBox = false;
             this.Name = "FrmUser";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.ShowIcon = false;

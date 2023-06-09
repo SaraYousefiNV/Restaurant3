@@ -17,25 +17,21 @@ namespace Restaurant3
         private void button2_Click(object sender, EventArgs e)
         {
             FrmUser FrmUser = new FrmUser();
-            FrmUser.Show();
+            FrmUser.ShowDialog();
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FrmAdmin frmAdmin = new FrmAdmin();
-            frmAdmin.Show();
+            FrmAdmin FrmAdmin = new FrmAdmin();
+            FrmAdmin.ShowDialog();
         }
 
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Login Login = new Login();
-            Login.Show();
-
-
-
-
+            FrmLogin Login = new FrmLogin();
+            Login.ShowDialog();
 
 
         }
