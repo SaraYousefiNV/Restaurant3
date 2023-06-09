@@ -1,4 +1,5 @@
-﻿using Repository.Repositories;
+﻿using Repository.Enums;
+using Repository.Repositories;
 using System;
 using System.Windows.Forms;
 
@@ -24,7 +25,7 @@ namespace Restaurant3
         {
             RestaurantRepository RestaurantRepository = new RestaurantRepository();
           
-            bool isSuccess = RestaurantRepository.Insert(txtFullName.Text, txtOwnerName.Text,txtNationalCode.Text, txtMobile.Text,txtAddress.Text,1,Convert.ToInt32(txtDfrom.Text) , Convert.ToInt32(txtDTo.Text));
+            bool isSuccess = RestaurantRepository.Insert(txtFullName.Text, txtOwnerName.Text,txtNationalCode.Text, txtMobile.Text,txtAddress.Text,Convert.ToInt32(UserType.admin),Convert.ToInt32(txtDfrom.Text) , Convert.ToInt32(txtDTo.Text));
 
             if (isSuccess == true)
             {

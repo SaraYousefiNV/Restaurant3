@@ -33,6 +33,11 @@ namespace Restaurant3
             this.txtName = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.dgUsers = new System.Windows.Forms.DataGridView();
+            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NationalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFamily = new System.Windows.Forms.TextBox();
@@ -44,11 +49,6 @@ namespace Restaurant3
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.grpUser = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.FirstName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LastName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NationalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgUsers)).BeginInit();
             this.grpUser.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -89,6 +89,53 @@ namespace Restaurant3
             this.dgUsers.Size = new System.Drawing.Size(776, 131);
             this.dgUsers.TabIndex = 2;
             this.dgUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
+            // 
+            // FirstName
+            // 
+            this.FirstName.DataPropertyName = "FirstName";
+            this.FirstName.FillWeight = 97.08123F;
+            this.FirstName.HeaderText = "نام";
+            this.FirstName.Name = "FirstName";
+            this.FirstName.ReadOnly = true;
+            this.FirstName.Width = 142;
+            // 
+            // LastName
+            // 
+            this.LastName.DataPropertyName = "LastName";
+            this.LastName.FillWeight = 97.08123F;
+            this.LastName.HeaderText = "نام خانوادگی";
+            this.LastName.Name = "LastName";
+            this.LastName.ReadOnly = true;
+            this.LastName.Width = 143;
+            // 
+            // NationalCode
+            // 
+            this.NationalCode.DataPropertyName = "NationalCode";
+            this.NationalCode.FillWeight = 97.08123F;
+            this.NationalCode.HeaderText = "کد ملی";
+            this.NationalCode.Name = "NationalCode";
+            this.NationalCode.ReadOnly = true;
+            this.NationalCode.Visible = false;
+            this.NationalCode.Width = 142;
+            // 
+            // Mobile
+            // 
+            this.Mobile.DataPropertyName = "Mobile";
+            this.Mobile.FillWeight = 97.08123F;
+            this.Mobile.HeaderText = "موبایل";
+            this.Mobile.Name = "Mobile";
+            this.Mobile.ReadOnly = true;
+            this.Mobile.Visible = false;
+            this.Mobile.Width = 142;
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "Address";
+            this.Address.FillWeight = 111.6751F;
+            this.Address.HeaderText = "آدرس";
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            this.Address.Width = 500;
             // 
             // label1
             // 
@@ -202,53 +249,6 @@ namespace Restaurant3
             this.groupBox2.TabIndex = 22;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "کاربران";
-            // 
-            // FirstName
-            // 
-            this.FirstName.DataPropertyName = "FirstName";
-            this.FirstName.FillWeight = 97.08123F;
-            this.FirstName.HeaderText = "نام";
-            this.FirstName.Name = "FirstName";
-            this.FirstName.ReadOnly = true;
-            this.FirstName.Width = 142;
-            // 
-            // LastName
-            // 
-            this.LastName.DataPropertyName = "LastName";
-            this.LastName.FillWeight = 97.08123F;
-            this.LastName.HeaderText = "نام خانوادگی";
-            this.LastName.Name = "LastName";
-            this.LastName.ReadOnly = true;
-            this.LastName.Width = 143;
-            // 
-            // NationalCode
-            // 
-            this.NationalCode.DataPropertyName = "NationalCode";
-            this.NationalCode.FillWeight = 97.08123F;
-            this.NationalCode.HeaderText = "کد ملی";
-            this.NationalCode.Name = "NationalCode";
-            this.NationalCode.ReadOnly = true;
-            this.NationalCode.Visible = false;
-            this.NationalCode.Width = 142;
-            // 
-            // Mobile
-            // 
-            this.Mobile.DataPropertyName = "Mobile";
-            this.Mobile.FillWeight = 97.08123F;
-            this.Mobile.HeaderText = "موبایل";
-            this.Mobile.Name = "Mobile";
-            this.Mobile.ReadOnly = true;
-            this.Mobile.Visible = false;
-            this.Mobile.Width = 142;
-            // 
-            // Address
-            // 
-            this.Address.DataPropertyName = "Address";
-            this.Address.FillWeight = 111.6751F;
-            this.Address.HeaderText = "آدرس";
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            this.Address.Width = 500;
             // 
             // FrmUser
             // 
