@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.txtFamily = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.gpSignIn = new System.Windows.Forms.GroupBox();
             this.btnSignIn = new System.Windows.Forms.Button();
             this.gpSignIn.SuspendLayout();
@@ -46,12 +46,12 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "رمز عبور :";
             // 
-            // txtFamily
+            // txtPassword
             // 
-            this.txtFamily.Location = new System.Drawing.Point(92, 72);
-            this.txtFamily.Name = "txtFamily";
-            this.txtFamily.Size = new System.Drawing.Size(181, 21);
-            this.txtFamily.TabIndex = 8;
+            this.txtPassword.Location = new System.Drawing.Point(92, 72);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(181, 21);
+            this.txtPassword.TabIndex = 8;
             // 
             // label1
             // 
@@ -62,19 +62,19 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "نام کاربری :";
             // 
-            // txtName
+            // txtUser
             // 
-            this.txtName.Location = new System.Drawing.Point(92, 37);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(181, 21);
-            this.txtName.TabIndex = 6;
+            this.txtUser.Location = new System.Drawing.Point(92, 37);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(181, 21);
+            this.txtUser.TabIndex = 6;
             // 
             // gpSignIn
             // 
             this.gpSignIn.Controls.Add(this.btnSignIn);
-            this.gpSignIn.Controls.Add(this.txtFamily);
+            this.gpSignIn.Controls.Add(this.txtPassword);
             this.gpSignIn.Controls.Add(this.label2);
-            this.gpSignIn.Controls.Add(this.txtName);
+            this.gpSignIn.Controls.Add(this.txtUser);
             this.gpSignIn.Controls.Add(this.label1);
             this.gpSignIn.Location = new System.Drawing.Point(12, 12);
             this.gpSignIn.Name = "gpSignIn";
@@ -92,6 +92,7 @@
             this.btnSignIn.TabIndex = 10;
             this.btnSignIn.Text = "ورود";
             this.btnSignIn.UseVisualStyleBackColor = true;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
             // FrmLogin
             // 
@@ -116,9 +117,9 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtFamily;
+        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.GroupBox gpSignIn;
         private System.Windows.Forms.Button btnSignIn;
     }
