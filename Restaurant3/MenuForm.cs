@@ -23,7 +23,7 @@ namespace Restaurant3
         {
             RepositoryMenu RepositoryMenu = new RepositoryMenu();
 
-            bool isSuccess = RepositoryMenu.Insert(txtfoodName.Text,Convert.ToDouble(txtPrice),txtDescription.Text);
+            bool isSuccess = RepositoryMenu.Insert(txtfoodName.Text,Convert.ToDouble(txtPrice.Text),txtDescription.Text);
 
             if (isSuccess == true)
             {
@@ -43,7 +43,7 @@ namespace Restaurant3
 
         private void backButton_Click(object sender, EventArgs e)
         {
-
+          
         }
 
         private void deleteButton_Click(object sender, EventArgs e)

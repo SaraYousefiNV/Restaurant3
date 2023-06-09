@@ -65,7 +65,7 @@
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(88, 36);
             this.backButton.TabIndex = 20;
-            this.backButton.Text = "بازگشت";
+            this.backButton.Text = "جستجو";
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 

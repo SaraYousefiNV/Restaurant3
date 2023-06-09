@@ -31,6 +31,8 @@ namespace Restaurant3
             {
                 MessageBox.Show("خوش آمدید");
 
+                MenuForm menuForm = new MenuForm();
+                menuForm.ShowDialog();
             }
             else
             {

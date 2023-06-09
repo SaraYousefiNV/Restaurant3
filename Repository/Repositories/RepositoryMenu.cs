@@ -20,14 +20,21 @@ namespace Repository.Repositories
       
         public bool Insert( string FoodName, double Price, string Description)
         {
-            
+         
             SqlConnection connection = new SqlConnection(Constanst.ConnectionString);
-            try   //([RestaurantId],[FoodName],[Price],[Description])
+            try
             {
+                int newID;
+                var query = "(SELECT id From Restaurants )";
+                SqlCommand sqlCommand1 = new SqlCommand(query, connection);
+
+                connection.Open();
+                newID = (int)sqlCommand1.ExecuteScalar();
                 string query2 = "INSERT INTO Foods(RestaurantId,FoodName,Price,Description) VALUES (@RestaurantId,@FoodName,@Price,@Description)";
 
 
-                SqlCommand sqlCommand = new SqlCommand(query2, connection);  
+                SqlCommand sqlCommand = new SqlCommand(query2, connection);
+                sqlCommand.Parameters.AddWithValue("@RestaurantId", newID);
                 sqlCommand.Parameters.AddWithValue("@FoodName", FoodName);
                 sqlCommand.Parameters.AddWithValue("@Price", Price);
                 sqlCommand.Parameters.AddWithValue("@Description", Description); 
@@ -44,10 +51,10 @@ namespace Repository.Repositories
             {
                 connection.Close();
             }
-
-
+            
         }
-
+        
+        
 
     }
 }
