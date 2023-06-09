@@ -1,6 +1,6 @@
 ﻿namespace Restaurant3
 {
-    partial class Login
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -66,17 +66,16 @@
             this.txtName.Size = new System.Drawing.Size(181, 20);
             this.txtName.TabIndex = 6;
             // 
-            // Login
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtFamily);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtName);
-            this.Name = "Login";
+            this.Name = "frmLogin";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

@@ -1,6 +1,6 @@
 ﻿namespace Restaurant3
 {
-    partial class FrmRes
+    partial class FrmMain
     {
         /// <summary>
         /// Required designer variable.
@@ -72,17 +72,20 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
-            // FrmRes
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = global::Restaurant3.Properties.Resources.Background2;
             this.ClientSize = new System.Drawing.Size(700, 450);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Name = "FrmRes";
+            this.MaximizeBox = false;
+            this.Name = "FrmMain";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "رستوران";
             this.Load += new System.EventHandler(this.FrmRes_Load);

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Restaurant3
 {
-    public partial class FrmRes : Form
+    public partial class FrmMain : Form
     {
-        public FrmRes()
+        public FrmMain()
         {
             InitializeComponent();
         }
@@ -23,8 +23,8 @@ namespace Restaurant3
         }
         private void button2_Click(object sender, EventArgs e)
         {
-            FrmMain FrmMain = new FrmMain();
-            FrmMain.Show();
+            FrmUser FrmUser = new FrmUser();
+            FrmUser.Show();
 
         }
 

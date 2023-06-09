@@ -1,6 +1,6 @@
 ﻿namespace Restaurant3
 {
-    partial class MenuForm
+    partial class frmMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -211,11 +211,10 @@
             this.FoodName.Name = "FoodName";
             this.FoodName.Width = 125;
             // 
-            // MenuForm
+            // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.deleteButton);
             this.Controls.Add(this.backButton);
@@ -228,7 +227,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.foodDataGridView);
-            this.Name = "MenuForm";
+            this.Name = "frmMenu";
             this.Text = "MenuForm";
             this.Load += new System.EventHandler(this.MenuForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.foodDataGridView)).EndInit();

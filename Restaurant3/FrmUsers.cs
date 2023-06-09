@@ -14,9 +14,9 @@ using Repository.Repositories;
 
 namespace Restaurant3
 {
-    public partial class FrmMain : Form
+    public partial class FrmUser : Form
     {
-        public FrmMain()
+        public FrmUser()
         {
             InitializeComponent();
         }
@@ -45,6 +45,9 @@ namespace Restaurant3
 
         private void FrmMain_Load_1(object sender, EventArgs e)
         {
+            CustomerRepository customerRepository = new CustomerRepository();
+            dgUsers.AutoGenerateColumns = false;
+            dgUsers.DataSource = customerRepository.SelectAll();
 
 
         }
@@ -92,6 +95,11 @@ namespace Restaurant3
             {
                 MessageBox.Show("عملیات با شکست مواجه شد", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
