@@ -47,7 +47,7 @@
             this.txtFullName = new System.Windows.Forms.TextBox();
             this.grpRes = new System.Windows.Forms.GroupBox();
             this.grpResDB = new System.Windows.Forms.GroupBox();
-            this.ResName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OwnerFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OwnerMobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OwnerNationalCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +65,7 @@
             this.dgRestaurant.AllowUserToDeleteRows = false;
             this.dgRestaurant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgRestaurant.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ResName,
+            this.FullName,
             this.OwnerFullName,
             this.OwnerMobile,
             this.OwnerNationalCode,
@@ -254,13 +254,13 @@
             this.grpResDB.TabStop = false;
             this.grpResDB.Text = "رستوران ها";
             // 
-            // ResName
+            // FullName
             // 
-            this.ResName.DataPropertyName = "Name";
-            this.ResName.HeaderText = "نام رستوران";
-            this.ResName.Name = "ResName";
-            this.ResName.ReadOnly = true;
-            this.ResName.Width = 250;
+            this.FullName.DataPropertyName = "FullName";
+            this.FullName.HeaderText = "نام رستوران";
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            this.FullName.Width = 250;
             // 
             // OwnerFullName
             // 
@@ -355,7 +355,7 @@
         private System.Windows.Forms.TextBox txtFullName;
         private System.Windows.Forms.GroupBox grpRes;
         private System.Windows.Forms.GroupBox grpResDB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ResName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn OwnerFullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn OwnerMobile;
         private System.Windows.Forms.DataGridViewTextBoxColumn OwnerNationalCode;
