@@ -14,7 +14,9 @@ namespace Restaurant3
        
             private void FrmAdmin_Load(object sender, EventArgs e)
         {
-
+            RestaurantRepository restaurantRepository = new RestaurantRepository();
+            dgRestaurant.AutoGenerateColumns = false;
+            dgRestaurant.DataSource = restaurantRepository.SelectAll();
 
         }
 
@@ -37,10 +39,21 @@ namespace Restaurant3
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+        
+            
         }
 
         private void txtAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

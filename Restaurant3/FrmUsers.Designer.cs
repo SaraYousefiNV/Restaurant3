@@ -86,7 +86,7 @@ namespace Restaurant3
             this.dgUsers.Location = new System.Drawing.Point(0, 20);
             this.dgUsers.Name = "dgUsers";
             this.dgUsers.ReadOnly = true;
-            this.dgUsers.Size = new System.Drawing.Size(776, 127);
+            this.dgUsers.Size = new System.Drawing.Size(776, 131);
             this.dgUsers.TabIndex = 2;
             this.dgUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
             // 
@@ -228,6 +228,7 @@ namespace Restaurant3
             this.NationalCode.HeaderText = "کد ملی";
             this.NationalCode.Name = "NationalCode";
             this.NationalCode.ReadOnly = true;
+            this.NationalCode.Visible = false;
             this.NationalCode.Width = 142;
             // 
             // Mobile
@@ -237,6 +238,7 @@ namespace Restaurant3
             this.Mobile.HeaderText = "موبایل";
             this.Mobile.Name = "Mobile";
             this.Mobile.ReadOnly = true;
+            this.Mobile.Visible = false;
             this.Mobile.Width = 142;
             // 
             // Address
@@ -246,7 +248,7 @@ namespace Restaurant3
             this.Address.HeaderText = "آدرس";
             this.Address.Name = "Address";
             this.Address.ReadOnly = true;
-            this.Address.Width = 200;
+            this.Address.Width = 500;
             // 
             // FrmUser
             // 
