@@ -9,7 +9,7 @@ namespace Repository.Repositories
 
         public DataTable SelectAll()
         {
-            string query = "SELECT * FROM Foods";
+            string query = "SELECT FoodName As N'نام',Price As N'قیمت',Description as N'توضیحات' FROM Foods";
             SqlConnection connection = new SqlConnection(Constanst.ConnectionString);
             SqlDataAdapter adapter = new SqlDataAdapter(query, connection);
             DataTable data = new DataTable();
@@ -53,6 +53,7 @@ namespace Repository.Repositories
             }
             
         }
+       
         
         
 

@@ -39,16 +39,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.saveButton = new System.Windows.Forms.Button();
             this.foodDataGridView = new System.Windows.Forms.DataGridView();
-            this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.foodDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // deleteButton
             // 
             this.deleteButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deleteButton.Location = new System.Drawing.Point(331, 100);
+            this.deleteButton.Location = new System.Drawing.Point(312, 88);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(2);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(88, 36);
@@ -60,7 +57,7 @@
             // backButton
             // 
             this.backButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backButton.Location = new System.Drawing.Point(231, 100);
+            this.backButton.Location = new System.Drawing.Point(187, 88);
             this.backButton.Margin = new System.Windows.Forms.Padding(2);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(88, 36);
@@ -72,7 +69,7 @@
             // editButton
             // 
             this.editButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editButton.Location = new System.Drawing.Point(231, 52);
+            this.editButton.Location = new System.Drawing.Point(187, 34);
             this.editButton.Margin = new System.Windows.Forms.Padding(2);
             this.editButton.Name = "editButton";
             this.editButton.Size = new System.Drawing.Size(88, 36);
@@ -84,20 +81,22 @@
             // txtDescription
             // 
             this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(434, 136);
+            this.txtDescription.Location = new System.Drawing.Point(178, 145);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(175, 29);
+            this.txtDescription.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtDescription.Size = new System.Drawing.Size(501, 29);
             this.txtDescription.TabIndex = 18;
             this.txtDescription.TextChanged += new System.EventHandler(this.descriptionTextBox_TextChanged);
             // 
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(434, 97);
+            this.txtPrice.Location = new System.Drawing.Point(426, 93);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(175, 29);
+            this.txtPrice.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtPrice.Size = new System.Drawing.Size(253, 29);
             this.txtPrice.TabIndex = 17;
             this.txtPrice.TextChanged += new System.EventHandler(this.priceTextBox_TextChanged);
             // 
@@ -105,9 +104,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(617, 144);
+            this.label3.Location = new System.Drawing.Point(692, 145);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
+            this.label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label3.Size = new System.Drawing.Size(79, 21);
             this.label3.TabIndex = 16;
             this.label3.Text = ": توضیحات";
@@ -116,9 +116,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(617, 100);
+            this.label2.Location = new System.Drawing.Point(708, 96);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
+            this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(54, 21);
             this.label2.TabIndex = 15;
             this.label2.Text = ": قیمت";
@@ -126,10 +127,11 @@
             // txtfoodName
             // 
             this.txtfoodName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtfoodName.Location = new System.Drawing.Point(435, 52);
+            this.txtfoodName.Location = new System.Drawing.Point(426, 42);
             this.txtfoodName.Margin = new System.Windows.Forms.Padding(2);
             this.txtfoodName.Name = "txtfoodName";
-            this.txtfoodName.Size = new System.Drawing.Size(175, 29);
+            this.txtfoodName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtfoodName.Size = new System.Drawing.Size(253, 29);
             this.txtfoodName.TabIndex = 14;
             this.txtfoodName.TextChanged += new System.EventHandler(this.foodNameTextBox_TextChanged);
             // 
@@ -137,9 +139,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(617, 60);
+            this.label1.Location = new System.Drawing.Point(698, 42);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
+            this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(64, 21);
             this.label1.TabIndex = 13;
             this.label1.Text = ": نام غذا ";
@@ -147,7 +150,7 @@
             // saveButton
             // 
             this.saveButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.saveButton.Location = new System.Drawing.Point(331, 53);
+            this.saveButton.Location = new System.Drawing.Point(312, 34);
             this.saveButton.Margin = new System.Windows.Forms.Padding(2);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(88, 36);
@@ -158,40 +161,17 @@
             // 
             // foodDataGridView
             // 
+            this.foodDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.foodDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.foodDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FoodName,
-            this.Price,
-            this.Description});
-            this.foodDataGridView.Location = new System.Drawing.Point(206, 188);
+            this.foodDataGridView.Location = new System.Drawing.Point(178, 187);
             this.foodDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.foodDataGridView.Name = "foodDataGridView";
             this.foodDataGridView.RowHeadersWidth = 51;
             this.foodDataGridView.RowTemplate.Height = 24;
-            this.foodDataGridView.Size = new System.Drawing.Size(420, 231);
+            this.foodDataGridView.ShowEditingIcon = false;
+            this.foodDataGridView.Size = new System.Drawing.Size(501, 213);
             this.foodDataGridView.TabIndex = 11;
             this.foodDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.foodDataGridView_CellContentClick);
-            // 
-            // FoodName
-            // 
-            this.FoodName.HeaderText = "نام";
-            this.FoodName.MinimumWidth = 6;
-            this.FoodName.Name = "FoodName";
-            this.FoodName.Width = 125;
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "قیمت";
-            this.Price.MinimumWidth = 6;
-            this.Price.Name = "Price";
-            this.Price.Width = 125;
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "توضیحات";
-            this.Description.MinimumWidth = 6;
-            this.Description.Name = "Description";
-            this.Description.Width = 125;
             // 
             // MenuForm
             // 
@@ -233,8 +213,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.DataGridView foodDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FoodName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
     }
 }

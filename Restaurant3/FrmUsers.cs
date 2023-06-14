@@ -76,7 +76,7 @@ namespace Restaurant3
         private void btnSave_Click(object sender, EventArgs e)
         {
             CustomerRepository CustomersRepository = new CustomerRepository();
-            bool isSuccess = CustomersRepository.Insert(txtName.Text, txtFamily.Text, txtID.Text, txtAddress.Text, txtAddress.Text, Convert.ToInt32(UserType.users));
+            bool isSuccess = CustomersRepository.Insert(txtName.Text, txtFamily.Text, txtID.Text, txtAddress.Text, txtAddress.Text, Convert.ToInt32(UserType.user));
             if (isSuccess == true)
             {
                 MessageBox.Show("عملیات با موفقیت انجام شد", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);

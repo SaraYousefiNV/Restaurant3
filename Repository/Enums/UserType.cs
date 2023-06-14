@@ -3,7 +3,7 @@
     public enum UserType
     {
         admin = 1,
-        users = 2
+        user = 2
     }
 }
 

@@ -28,13 +28,13 @@ namespace Restaurant3
             SqlDataAdapter da = new SqlDataAdapter("SELECT COUNT(*) FROM Users WHERE UserName='" + txtUser.Text + "' and Password='" + txtPassword.Text + "'", Constanst.ConnectionString);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            if (dt.Rows[0][0].ToString() == "1" && GetSelectedUserType(txtUser.Text) == "2")
+            if (dt.Rows[0][0].ToString() == "1" && GetSelectedUserType(txtUser.Text) == "1")
             {
                 MessageBox.Show("خوش آمدید");
                 MenuForm menuForm = new MenuForm();
                 menuForm.ShowDialog();
             }
-            else if (dt.Rows[0][0].ToString() == "1" && GetSelectedUserType(txtUser.Text) == "1")
+            else if (dt.Rows[0][0].ToString() == "1" && GetSelectedUserType(txtUser.Text) == "2")
             {
                 MessageBox.Show("خوش آمدید");
                 RestaurantForm restaurantForm = new RestaurantForm();
