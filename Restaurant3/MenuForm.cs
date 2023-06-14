@@ -61,7 +61,7 @@ namespace Restaurant3
 
         private void deleteButton_Click(object sender, EventArgs e)
         {
-
+            DeleteMenu deleteMenu = new DeleteMenu();
         }
 
         private void foodNameTextBox_TextChanged(object sender, EventArgs e)
