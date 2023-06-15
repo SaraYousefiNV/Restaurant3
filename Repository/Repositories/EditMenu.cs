@@ -22,14 +22,17 @@ namespace Repository.Repositories
             SqlConnection connection = new SqlConnection(Constanst.ConnectionString);
             try
             {
+               
+                var sqlCommand1 = new SqlCommand();
+                sqlCommand1.Connection = connection;
+                sqlCommand1.CommandType = CommandType.Text;
                 connection.Open();
-                var query = "update Foods set FoodName=@FoodName,Price=@Price,Description=@Description where Id=@FoodId ";
-                SqlCommand sqlCommand1 = new SqlCommand(query, connection);
-
+                sqlCommand1.CommandText = ("Update Foods Set FoodName=@FoodName,Price=@Price,Deceription=@Deceription where Id=@FooodId");
                 sqlCommand1.Parameters.AddWithValue("@FoodName", FoodName);
                 sqlCommand1.Parameters.AddWithValue("@Price", Price);
-                sqlCommand1.Parameters.AddWithValue("@Description", Description);
+                sqlCommand1.Parameters.AddWithValue("@Deceription", Description);
                 sqlCommand1.ExecuteNonQuery();
+                connection.Close();
 
 
                 return true;

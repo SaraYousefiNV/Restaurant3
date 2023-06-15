@@ -2,7 +2,7 @@
 using System;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-
+using System.Data;
 namespace Restaurant3
 {
     public partial class MenuForm : Form
@@ -39,24 +39,21 @@ namespace Restaurant3
 
         private void editButton_Click(object sender, EventArgs e)
         {
-            EditMenu editMenu = new EditMenu();
+            SqlConnection connection = new SqlConnection(Constanst.ConnectionString);
+            SqlDataAdapter sqlData = new SqlDataAdapter("Foods_Update", connection);
+            DataTable dt = new DataTable();
+            sqlData.Fill(dt);
+            foodDataGridView.DataSource = dt;
 
-            bool isSuccess = editMenu.Edit(txtfoodName.Text, Convert.ToDouble(txtPrice.Text), txtDescription.Text);
-
-            if (isSuccess == true)
-            {
-                MessageBox.Show("عملیات با موفقیت انجام شد", "Succes", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                DialogResult = DialogResult.OK;
-            }
-            else
-            {
-                MessageBox.Show("عملیات با شکست مواجه شد", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
-            SerachMenu serachMenu = new SerachMenu();
+            SqlConnection connection = new SqlConnection(Constanst.ConnectionString);
+            SqlDataAdapter sqlData = new SqlDataAdapter("GetAllFood", connection);
+            DataTable dt = new DataTable();
+            sqlData.Fill(dt);
+            foodDataGridView.DataSource = dt;
         }
 
         private void deleteButton_Click(object sender, EventArgs e)

@@ -3,7 +3,7 @@ using System.Data.SqlClient;
 
 namespace Repository.Repositories
 {
-    public class SerachMenu
+    public class SearchMenu
     {
         public DataTable SelectAll()
         {
@@ -16,17 +16,12 @@ namespace Repository.Repositories
 
         }
 
-        public bool serach()
+        public bool search()
         {
 
             SqlConnection connection = new SqlConnection(Constanst.ConnectionString);
             try
             {
-                connection.Open();
-                var query = "select * from  Foods  where FoodName like N'%%' ";
-                SqlCommand sqlCommand1 = new SqlCommand(query, connection);
-                sqlCommand1.ExecuteNonQuery();
-
 
                 return true;
             }
@@ -38,7 +33,9 @@ namespace Repository.Repositories
             {
                 connection.Close();
             }
+            
 
+            
         }
     }
 }
