@@ -27,7 +27,6 @@ namespace Repository.Repositories
                 int newID;
                 var query = "INSERT INTO Users (UserName,Password,[Type]) VALUES (@UserName,@Password,@Type) ;SELECT CAST(scope_identity() AS int)";
                 SqlCommand sqlCommand1 = new SqlCommand(query, connection);
-
                 sqlCommand1.Parameters.AddWithValue("@UserName", nationalcode);
                 sqlCommand1.Parameters.AddWithValue("@Password", mobile);
                 sqlCommand1.Parameters.AddWithValue("@Type", type);

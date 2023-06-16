@@ -50,6 +50,7 @@
     <Compile Include="Repositories\DeleteMenu.cs" />
     <Compile Include="Repositories\EditMenu.cs" />
     <Compile Include="Repositories\RepositoryMenu.cs" />
+    <Compile Include="Repositories\RestaurantFoodRepository.cs" />
     <Compile Include="Repositories\RestaurantList.cs" />
     <Compile Include="Repositories\RestaurantRepository.cs" />
     <Compile Include="Repositories\SearchMenu.cs" />

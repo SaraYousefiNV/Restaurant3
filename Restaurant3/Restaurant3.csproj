@@ -93,6 +93,12 @@
     <Compile Include="RestaurantForm.Designer.cs">
       <DependentUpon>RestaurantForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FoodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FoodForm.Designer.cs">
+      <DependentUpon>FoodForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmAdmin.resx">
       <DependentUpon>FrmAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="RestaurantForm.resx">
       <DependentUpon>RestaurantForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FoodForm.resx">
+      <DependentUpon>FoodForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -159,6 +168,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Kitchen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

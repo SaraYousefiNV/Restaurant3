@@ -15,7 +15,7 @@ namespace Restaurant3
         private void MenuForm_Load(object sender, EventArgs e)
         {
             RepositoryMenu repositoryMenu = new RepositoryMenu();
-            foodDataGridView.AutoGenerateColumns = true;
+            foodDataGridView.AutoGenerateColumns = false;
             foodDataGridView.DataSource = repositoryMenu.SelectAll();
 
         }
